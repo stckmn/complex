@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:16-alpine as builder
 
 USER node
 
@@ -20,6 +20,6 @@ EXPOSE 3000
 
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /home/node/app/build /usr/share/nginx/html
 
 CMD ["nginx", "-g", "daemon off;"]
