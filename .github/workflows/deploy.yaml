@@ -33,6 +33,6 @@ jobs:
           environment_name: Multi-docker-env
           # existing_bucker_name: elasticbeanstalk-us-west-2-590183879096
           region: us-west-2
-          version_label: 1234
+          version_label: 1235
           deployment_package: deploy.zip
 
